@@ -1,7 +1,8 @@
 all: document.pdf
 
-%.pdf: %.md
+%.pdf: %.md pandoc-template.tex
 	pandoc $< --template pandoc-template.tex -o $@
 
-%.docx: %.md
-	pandoc $< -o $@
+.PHONY: clean
+clean:
+	rm document.pdf
