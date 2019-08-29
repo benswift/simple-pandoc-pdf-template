@@ -17,6 +17,25 @@ which gives decent-looking pdf output and a `Makefile` to tie it all together.
 - [Pandoc](https://pandoc.org)
 - [LaTeX](https://www.latex-project.org)
 
+## Customisation
+
+If you know a bit of LaTeX and want to tweak the output, then you can mess with
+the header stuff in `pandoc-template.tex`. If you want to get fancy, there are a
+bunch of [Pandoc-defined
+variables](https://pandoc.org/MANUAL.html#using-variables-in-templates) you can
+use.
+
+## Caveats
+
+Almost all of this can be done directly with Pandoc and the right CLI
+flags/variables, but sometimes it's just easier to edit the LaTeX in the
+template directly rather than dealing with long, complicated `pandoc`
+invocations with heaps of flags.
+
+Pandoc can generate all the output formats, but this template is really only
+geared towards the pdf-via-LaTeX pathway. So if you try and do something else it
+might not work.
+
 ## Licence
 
 Copyright (C) 2019  Ben Swift
