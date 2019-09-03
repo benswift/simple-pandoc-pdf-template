@@ -6,15 +6,21 @@ output without futzing with LaTeX.
 Pandoc is doing all the heavy lifting---this just adds a simple LaTeX "header"
 which gives decent-looking pdf output and a `Makefile` to tie it all together.
 
+_Note:_ this `bibtex` branch also supports referencing with
+`pandoc-citeproc`---just add your Bib(La)TeX references to `references.bib`.
+
 ## Usage
 
 1. write your content in `document.md`
+2. put your references in `references.bib` and cite them in the main document
+   with e.g. `[@refKey]`
 2. run `make`
 
 ## Requirements
 
 - [make](https://www.gnu.org/software/make/) (optional, but handy)
 - [Pandoc](https://pandoc.org)
+- [pandoc-citeproc](https://hackage.haskell.org/package/pandoc-citeproc)
 - [LaTeX](https://www.latex-project.org)
 
 ## Customisation
