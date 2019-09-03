@@ -6,6 +6,9 @@ output without futzing with LaTeX.
 Pandoc is doing all the heavy lifting---this just adds a simple LaTeX "header"
 which gives decent-looking pdf output and a `Makefile` to tie it all together.
 
+_Note:_ if you need citations/references, check out the `bibtex` branch in this
+repo.
+
 ## Usage
 
 1. write your content in `document.md`
