@@ -14,7 +14,7 @@ _Note:_ this `bibtex` branch also supports referencing with
 1. write your content in `document.md`
 2. put your references in `references.bib` and cite them in the main document
    with e.g. `[@refKey]`
-2. run `make`
+3. run `make`
 
 ## Requirements
 
