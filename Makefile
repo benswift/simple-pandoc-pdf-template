@@ -1,12 +1,12 @@
-# make sure that this matches the md file, e.g. if the content is in
-# document.md, then this $(CONTENT_FILE) should be document.pdf
-CONTENT_FILE=document.pdf
+CONTENT_FILE=document.md
+OUTPUT_FILE=$(CONTENT_FILE:.md=.pdf)
+TEMPLATE_FILE=pandoc-template.tex
 
-all: $(CONTENT_FILE)
+all: $(OUTPUT_FILE)
 
-%.pdf: %.md pandoc-template.tex
-	pandoc $< --template pandoc-template.tex -o $@
+%.pdf: %.md $(TEMPLATE_FILE)
+	pandoc $< --template $(TEMPLATE_FILE) -o $@
 
 .PHONY: clean
 clean:
-	rm $(CONTENT_FILE)
+	rm $(OUTPUT_FILE)
