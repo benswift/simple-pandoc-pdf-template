@@ -20,9 +20,31 @@ allcolors=DarkBlue,
 pdfpagelabels,
 hyperfootnotes=true]{hyperref}
 
-% it's a pandoc thing...
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% some of these handy pandoc->latex tricks from                                              %
+% https://github.com/craigbass76/pandoc_latex_template/blob/master/templates/fossfolks.latex %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\tightlist{}
+
+\usepackage{longtable}
+\def\toprule{\hline}
+\def\midrule{\hline}
+\def\bottomrule{\hline}
+
+% ----------------------------------------------------------------------
+% Get rid of 1, 1.2, 3.1.5 types of heading numbers
+% ----------------------------------------------------------------------
+\makeatletter
+\renewcommand\thesection{}
+\renewcommand\thesubsection{}
+\renewcommand\thesubsubsection{}
+\renewcommand\theparagraph{}
+\renewcommand\thesubparagraph{}
+\makeatother
+\makeatletter
+\def\@seccntformat#1{\protect\makebox[0pt][r]{{\csname the#1\endcsname\quad}}}
+\makeatother
 
 \author{$author$}
 
