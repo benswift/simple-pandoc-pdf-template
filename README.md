@@ -23,13 +23,28 @@ _Note:_ this `bibtex` branch also supports referencing with
 - [pandoc-citeproc](https://hackage.haskell.org/package/pandoc-citeproc)
 - [LaTeX](https://www.latex-project.org)
 
-## Customisation
+## LaTeX customisation
 
 If you know a bit of LaTeX and want to tweak the output, then you can mess with
 the header stuff in `pandoc-template.tex`. If you want to get fancy, there are a
 bunch of [Pandoc-defined
 variables](https://pandoc.org/MANUAL.html#using-variables-in-templates) you can
 use.
+
+## Can I do _X_ using this template?
+
+Um, maybe.
+
+This template allows you to write most of your content in markdown, but then
+"drop down" into LaTeX when you need more control over the output (since pandoc
+passes raw LaTeX code straight through). This is basically the same workflow for
+which markdown was invented, except in that case for HTML.
+
+If the output you want is going to require lots of very specific control over
+the layout then you're probably better off just writing in LaTeX directly, but
+if you want to mostly focus on the content but occasionally have more control
+over the way it's displayed, sprinkling your markdown files with LaTeX can be a
+useful option.
 
 ## Caveats
 
