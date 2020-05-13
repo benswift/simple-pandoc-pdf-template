@@ -20,9 +20,44 @@ allcolors=DarkBlue,
 pdfpagelabels,
 hyperfootnotes=true]{hyperref}
 
-% it's a pandoc thing...
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% some of these handy pandoc->latex tricks from                                              %
+% https://github.com/craigbass76/pandoc_latex_template/blob/master/templates/fossfolks.latex %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\tightlist{}
+
+\usepackage{longtable}
+\def\toprule{\hline}
+\def\midrule{\hline}
+\def\bottomrule{\hline}
+
+\usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
+$for(bibliography)$
+\addbibresource{$bibliography$}
+$endfor$
+
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{cslreferences}%
+{$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
+{\par}
+
+
+% ----------------------------------------------------------------------
+% Get rid of 1, 1.2, 3.1.5 types of heading numbers
+% ----------------------------------------------------------------------
+\makeatletter
+\renewcommand\thesection{}
+\renewcommand\thesubsection{}
+\renewcommand\thesubsubsection{}
+\renewcommand\theparagraph{}
+\renewcommand\thesubparagraph{}
+\makeatother
+\makeatletter
+\def\@seccntformat#1{\protect\makebox[0pt][r]{{\csname the#1\endcsname\quad}}}
+\makeatother
 
 \author{$author$}
 
