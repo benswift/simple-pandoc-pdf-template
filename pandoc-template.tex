@@ -37,13 +37,14 @@ $for(bibliography)$
 \addbibresource{$bibliography$}
 $endfor$
 
+$if(csl-refs)$
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
-\newenvironment{cslreferences}%
+\newenvironment{CSLReferences}%
 {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
   \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
 {\par}
-
+$endif$
 
 % ----------------------------------------------------------------------
 % Get rid of 1, 1.2, 3.1.5 types of heading numbers

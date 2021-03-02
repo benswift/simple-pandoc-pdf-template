@@ -6,7 +6,7 @@ TEMPLATE_FILE=pandoc-template.tex
 all: $(OUTPUT_FILE)
 
 %.pdf: %.md $(TEMPLATE_FILE) $(REFERENCE_FILE)
-	pandoc --filter pandoc-citeproc $< --template $(TEMPLATE_FILE) -o $@
+	pandoc --citeproc $< --template $(TEMPLATE_FILE) -o $@
 
 .PHONY: clean
 clean:
