@@ -59,7 +59,7 @@ might not work.
 
 ## Licence
 
-Copyright (C) 2019  Ben Swift
+Copyright (C) 2021  Ben Swift
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
