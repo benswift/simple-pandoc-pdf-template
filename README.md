@@ -7,7 +7,8 @@ Pandoc is doing all the heavy lifting---this just adds a simple LaTeX "header"
 which gives decent-looking pdf output and a `Makefile` to tie it all together.
 
 _Note:_ this `bibtex` branch also supports referencing with
-`pandoc-citeproc`---just add your Bib(La)TeX references to `references.bib`.
+[citeproc](https://github.com/jgm/citeproc)---just add your Bib(La)TeX
+references to `references.bib`.
 
 ## Usage
 
@@ -20,7 +21,6 @@ _Note:_ this `bibtex` branch also supports referencing with
 
 - [make](https://www.gnu.org/software/make/) (optional, but handy)
 - [Pandoc](https://pandoc.org)
-- [pandoc-citeproc](https://hackage.haskell.org/package/pandoc-citeproc)
 - [LaTeX](https://www.latex-project.org)
 
 ## LaTeX customisation
